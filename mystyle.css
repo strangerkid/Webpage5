@@ -1,0 +1,106 @@
+body {
+  background: linear-gradient(
+    to bottom
+    #5F9EA0
+    #5F9EA0 50%,
+    #FFF8DC 50%,
+    #FFF8DC
+);
+background-size: 100% 200%
+}
+
+#container {
+  position: relative;
+  margin: 0 auto;
+  top: 150px;
+  height: 300px;
+  width: 300px;
+  background: #FFF;
+}
+
+#skull {
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  width: 200px;
+  height: 200px;
+  background: pink;
+  animation-play-state: paused;
+}
+
+#eye {
+  position: absolute;
+  left: 25px;
+  top: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: #000;
+  animation-play-state: inherit;
+}
+
+#bone-rect {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 400px;
+  height: 50px;
+  background: #CCC;
+}
+
+#bone-knob {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: #CCC;
+}
+
+.knob-loc2 {
+  left: 375px;
+  top: 25px;
+}
+
+.knob-loc3 {
+  left: 375px;
+  top: -25px;
+}
+
+.knob-loc4 {
+  left: -25px;
+  top: 25px;
+}
+
+#bone {
+  position: relative;
+}
+
+.bone {
+  transform: rotate(30deg);
+  top: 75px;
+  left: -32.5px;
+}
+
+.bone2 {
+  transform: rotate(-30deg);
+  top: 125px;
+  left: -52.5px;
+}
+
+#pupil {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background: #FFF;
+  animation-name: look-about;
+  animation-duration: 3s;
+  animation-play-state: inherit;
+}
+
+@@keyframes loo-about {
+  0% {left:20px;}
+  5% {left:30px;}
+}
