@@ -1,106 +1,157 @@
 body {
   background: linear-gradient(
-    to bottom
-    #5F9EA0
-    #5F9EA0 50%,
-    #FFF8DC 50%,
-    #FFF8DC
+    to bottom,
+    #F5FFFA,
+    #F5FFFA 50%,
+    #DDA0DD 50%,
+    #DDA0DD
 );
-background-size: 100% 200%
+background-size: 100% 20px;
 }
 
-#container {
+#square {
   position: relative;
   margin: 0 auto;
+  left: 50px;
   top: 150px;
   height: 300px;
   width: 300px;
-  background: #FFF;
+  background: #4682B4;
 }
 
 #skull {
   position: absolute;
-  left: 50px;
-  top: 50px;
-  width: 200px;
-  height: 200px;
-  background: pink;
+  left: 13px;
+  top: 15px;
+  width: 275px;
+  height: 275px;
+  background: #FF6347;
   animation-play-state: paused;
+}
+
+#mouth-rect {
+  position: absolute;
+  left: 100px;
+  top: 160px;
+  width: 70px;
+  height: 40px;
+  background: #D3D3D3;
+}
+
+#lines {
+  position: absolute;
+  left: 50px;
+  top: 0px;
+  width: 10px;
+  height: 40px;
+  background: #778899;
+  animation-name: move-about;
+  animation-duration: 4s;
+  animation-play-state: inherit;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move-about {
+  0% {left:50px;}
+  5% {left:60px;}
+  30% {left:60px;}
+  35% {left:40px;}
+  60% {left:40px;}
+  65% {left:50px;}
+  100% {left:50px;}
+}
+
+#lines2 {
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  width: 10px;
+  height: 40px;
+  background: #778899;
+  animation-name: move-about2;
+  animation-duration: 4s;
+  animation-play-state: inherit;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move-about2 {
+  0% {left:10px;}
+  5% {left:20px;}
+  30% {left:20px;}
+  35% {left:0px;}
+  60% {left:0px;}
+  65% {left:10px;}
+  100% {left:10px;}
+}
+
+#lines3 {
+  position: absolute;
+  left: 30px;
+  top: 0px;
+  width: 10px;
+  height: 40px;
+  background: #778899;
+  animation-name: move-about3;
+  animation-duration: 4s;
+  animation-play-state: inherit;
+  animation-iteration-count: infinite;
+}
+
+@keyframes move-about3 {
+  0% {left:30px;}
+  5% {left:40px;}
+  30% {left:40px;}
+  35% {left:20px;}
+  60% {left:20px;}
+  65% {left:30px;}
+  100% {left:30px;}
 }
 
 #eye {
   position: absolute;
-  left: 25px;
-  top: 40px;
-  width: 50px;
+  left: 40px;
+  top: 50px;
+  width: 200px;
   height: 50px;
   border-radius: 50px;
   background: #000;
   animation-play-state: inherit;
 }
 
-#bone-rect {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 400px;
-  height: 50px;
-  background: #CCC;
-}
-
-#bone-knob {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  background: #CCC;
-}
-
-.knob-loc2 {
-  left: 375px;
-  top: 25px;
-}
-
-.knob-loc3 {
-  left: 375px;
-  top: -25px;
-}
-
-.knob-loc4 {
-  left: -25px;
-  top: 25px;
-}
-
-#bone {
-  position: relative;
-}
-
-.bone {
-  transform: rotate(30deg);
-  top: 75px;
-  left: -32.5px;
-}
-
-.bone2 {
-  transform: rotate(-30deg);
-  top: 125px;
-  left: -52.5px;
-}
-
 #pupil {
   position: absolute;
-  left: 20px;
-  top: 20px;
-  width: 10px;
-  height: 10px;
-  border-radius: 10px;
+  left: 50px;
+  top: 8px;
+  width: 100px;
+  height: 35px;
+  border-radius: 40px;
   background: #FFF;
-  animation-name: look-about;
-  animation-duration: 3s;
-  animation-play-state: inherit;
 }
 
-@@keyframes loo-about {
-  0% {left:20px;}
-  5% {left:30px;}
+#black-hole {
+  position: absolute;
+  left: 35px;
+  top: 5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 40px;
+  background: #000;
+  animation-name: look-about;
+  animation-duration: 4s;
+  animation-play-state: inherit;
+  animation-iteration-count: infinite;
+}
+
+@keyframes look-about {
+  0% {left:35px;}
+  5% {left:55px;}
+  30% {left:55px;}
+  35% {left:15px;}
+  60% {left:15px;}
+  65% {left:35px;}
+  100% {left:35px;}
+}
+
+#skull:hover {
+  animation-play-state: paused;
 }
